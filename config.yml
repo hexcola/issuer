@@ -1,0 +1,16 @@
+# Your github token
+# !!! Don't share and upload it to internet
+token: 'do not tell any one, and do not upload'
+
+# the owner of github repository
+owner: 'AIHackers'
+
+# the name of github repository
+repo: 'IA002'
+
+# what kind of issues you want extract out? all, open, closed, etc.
+state: 'all'
+
+# Where do you what to save your issues and comments
+# if you're not specify, we will create a backup folder under current project default.
+output: backup

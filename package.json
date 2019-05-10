@@ -1,0 +1,24 @@
+{
+  "name": "issuer",
+  "version": "1.0.0",
+  "description": "一休：将 GitHub issues &amp; comments 导出，并生成 issue 书",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hexcola/issuer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hexcola/issuer/issues"
+  },
+  "homepage": "https://github.com/hexcola/issuer#readme",
+  "dependencies": {
+    "@octokit/rest": "^16.25.3",
+    "js-yaml": "^3.13.1"
+  }
+}
