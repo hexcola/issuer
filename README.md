@@ -7,7 +7,7 @@
 
 ## 要求
 
-- 安装 Node.js 10（其他版本未测试）
+- 安装 [Node.js 10](http://yiilib.com/topic/723/Mac%E4%BD%BF%E7%94%A8Homebrew%E5%AE%89%E8%A3%85%E6%8C%87%E5%AE%9A%E7%89%88%E6%9C%ACNodejs)（其他版本未测试） `brew install node@10`
 - 安装 Git
 - 命令行操作
 
