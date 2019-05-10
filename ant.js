@@ -59,7 +59,9 @@ async function fetchIssues(page, per_page = 100){
         data.forEach((issue) =>{
             const fileName = `${issue.number}.json`;
             const savePath = path.resolve(issueSavePath, fileName);
-            fs.writeFileSync(savePath, JSON.stringify(data));
+            fs.writeFile(savePath, JSON.stringify(issue), (err) => {
+                if(err) { console.error(`[FAIL] ${err}`); }
+            });
             console.log(`[OK] issue ${issue.number} saved.`)
         });
 
@@ -93,7 +95,9 @@ async function fetchComments(issue_number, page, per_page = 100){
 
     const fileName = `${issue_number}-${page}.json`;
     const savePath = path.resolve(commentSavePath, fileName);
-    fs.writeFileSync(savePath, JSON.stringify(data));
+    fs.writeFile(savePath, JSON.stringify(data), (err) => {
+        if(err) { console.error(`[FAIL] ${err}`); }
+    });
     console.log(`[OK] comments of issue ${issue_number} saved.`)
 
     if(data.length >= 100) {
@@ -128,7 +132,7 @@ async function main() {
     await asyncForEach(issueFiles, async(issueFile) => {
         const issue_number = parseInt(issueFile.split('.')[0]);
         await fetchComments(issue_number, 0);
-        await sleep(300);
+        // await sleep(300);
     })
     console.log('done.')
 }
