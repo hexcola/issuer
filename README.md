@@ -20,10 +20,10 @@ git clone https://github.com/hexcola/issuer
 cd issuer
 ```
 
-2. 在项目目录下创建 `output` 目录，并在 `output` 目录下分别创建 `issues` 和 `comments` 目录，你的 issue 和 comment 会分别存在这两个目录。
+2. 在项目目录下创建 `backup` 目录，并在 `backup` 目录下分别创建 `issues` 和 `comments` 目录，你的 issue 和 comment 会分别存在这两个目录。
 
 ```bash
-mkdir -p output/issues output/comments
+mkdir -p backup/issues backup/comments
 ```
 
 3. 找到 `config.yml` 文件，进行修改：
